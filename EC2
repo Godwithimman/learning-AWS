@@ -1,0 +1,109 @@
+What EC2 really is (plain meaning)
+
+An EC2 instance is a server in the cloud.
+
+It behaves like a normal computer:
+• it has CPU, RAM, disk, and network
+• you can install software
+• you can run applications
+• you can shut it down or delete it
+
+The difference is elasticity:
+You can create it in minutes, resize it anytime, and destroy it when you’re done.
+
+1. Application and OS Image (AMI – Amazon Machine Image)
+
+This is the soul of the instance. It defines what software is installed when the server is born.
+
+What it includes
+• Operating system (Linux, Windows)
+• Pre-installed applications (Nginx, Docker, WordPress, custom images)
+• System configurations
+
+Use cases
+• Amazon Linux → general-purpose, AWS-optimized workloads
+• Ubuntu → developer-friendly, package-rich environments
+• Windows Server → .NET apps, Active Directory
+• Marketplace AMIs → ready-made stacks (WordPress, Splunk, Kali Linux)
+• Custom AMI → reuse a hardened or preconfigured server across teams
+
+2. Instance Type
+This defines the hardware personality of the server.
+
+What it controls
+• CPU power
+• Memory (RAM)
+• Network performance
+• Cost per hour
+
+Use cases
+• t2/t3 → low traffic websites, learning, testing
+• m5 → application servers
+• c5 → compute-heavy workloads
+• r5 → memory-heavy databases
+
+3. Key Pair (Login)
+This is how you prove you’re allowed inside the server.
+
+What it is
+• A public/private SSH key pair
+• AWS stores the public key
+• You keep the private key
+
+Use cases
+• Secure SSH access to Linux instances
+• No passwords = reduced brute-force risk
+• Required for admin access (especially first login)
+
+Lose the private key and the server becomes a locked vault.
+
+4. Network Settings
+
+This decides where the instance lives and who can talk to it.
+
+What it includes
+• VPC (virtual private cloud)
+• Subnet (public or private)
+• Auto-assign public IP
+• Security Group (firewall rules)
+
+Use cases
+• Public subnet → web servers accessible from the internet
+• Private subnet → databases and internal services
+• Security groups → allow only SSH (22), HTTP (80), HTTPS (443)
+• SOC relevance → controlling attack surface
+
+5. Configure Storage
+
+This defines how and where data is stored.
+
+What it includes
+• Root volume (OS disk)
+• Additional EBS volumes
+• Volume type (gp3, io1, etc.)
+• Size and performance
+
+Use cases
+• Small volume → lightweight servers
+• Large volume → databases, logs
+• High IOPS volumes → performance-critical apps
+• Encrypted volumes → compliance and security
+
+Storage survives instance restarts, sometimes even termination.
+
+6. Advanced Details
+
+This is the control room. Optional, powerful, often ignored.
+
+Key options
+• User data (startup scripts)
+• IAM role attachment
+• Shutdown behavior
+• Placement settings
+
+Use cases
+• User data → auto-install packages on boot
+• IAM role → allow EC2 to access S3, CloudWatch securely
+• Shutdown behavior → stop vs terminate
+• Automation → zero-touch server provisioning
+
