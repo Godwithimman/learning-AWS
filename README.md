@@ -8,6 +8,8 @@ In this repo i will post about AWS services that i have learned:
      EBS (ELASTIC BOX STORAGE)
      EFS (ELASTIC FILE SYSTEM)
      IAM (IDENTITY ACCESS MANAGEMENT)
+     CLOUDWATCH
+     CLOUDTRAIL
      
      
     
