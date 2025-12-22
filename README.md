@@ -1,0 +1,13 @@
+In this repo i will post about AWS services that i have learned:
+     EC2 (ELATIC COMPUTE CLOUD)
+     S3 BUCKET
+     VPC (VIRTUAL PRIVATE CLOUD)
+     ELB (ELASTIC LOAD BALANCER)
+     NAT GATEWAY
+     LAMBDA SERVICE
+     EBS (ELASTIC BOX STORAGE)
+     EFS (ELASTIC FILE SYSTEM)
+     IAM (IDENTITY ACCESS MANAGEMENT)
+     
+     
+    
